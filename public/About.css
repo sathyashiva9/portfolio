@@ -1,0 +1,12 @@
+/* .About-me {
+    display:inline;
+} */
+
+
+.About-me {
+    display: flex; /* Use flexbox for layout */
+    /* align-items: center; Center elements vertically */
+  }
+/* img{
+    border-radius:90px;
+} */
