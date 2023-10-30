@@ -1,0 +1,9 @@
+/* Contacts.css */
+.contact-link {
+    /* text-decoration: none; Remove underlining */
+    display: flex;  
+    /* Display contents in a row */ 
+    /* align-items: center; Center contents vertically/ */
+    /* color: #000; Change the link color to black (you can choose your desired color) */
+  }
+  
