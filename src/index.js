@@ -43,7 +43,7 @@ function SidebarTabsExample() {
             
               <Paragraph><tab/></Paragraph>
             {/* } */}
-            {/* <Paragraph>Panel {tab}</Paragraph> */}
+            <h4>{tab}</h4>
             
             {tab === 'About' && <About />} {/* Render About component when About tab is active */}
             {tab === 'Skills' && <Skills />} {/* Render Traits component when Traits tab is active */}
