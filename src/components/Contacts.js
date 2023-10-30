@@ -8,7 +8,8 @@
 // export default Contacts;
 import React from "react";
 import '@fortawesome/fontawesome-free/css/all.min.css'; // Import the Font Awesome CSS
-import './Contacts'
+import './Contacts';
+// import 'C:/Users/sai/Desktop/RSathyaPortfolio/portfolio/public/Contacts.css';
 const Contacts = () => {
   return (
     <div>
@@ -21,8 +22,10 @@ const Contacts = () => {
         </a>
       </div>
       <div className="phone-number">
+        <a href="tel:9390659265">
       <i class="fa-solid fa-phone"></i>
         9390659265
+      </a>
       </div>
       <div></div>
     </div>
