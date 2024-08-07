@@ -15,12 +15,12 @@ To list all processes
 ```Linux
 top
 ```
-TO identify pid of a process using port number
+To identify pid of a process using port number
 ```Linux
 lsof -i :3000
 ```
 
-
-
+## References
+[https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 ## File Handling
 [https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux](https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux)
