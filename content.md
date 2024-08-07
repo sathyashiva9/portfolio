@@ -10,5 +10,17 @@ Permissions and users
 diskspace cleanup
 logs unnecessary cleanup
 
+## Process
+To list all processes 
+```Linux
+top
+```
+TO identify pid of a process using port number
+```Linux
+lsof -i :3000
+```
+
+
+
 ## File Handling
 [https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux](https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux)
