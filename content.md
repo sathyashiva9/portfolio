@@ -13,19 +13,21 @@ logs unnecessary cleanup
 ## Commands
 * nslookup
 * tmux
-df -hT
-du -sh
-top
-ps
-lsblk
-ssh, and scp
-And regarding storage disk management, networking related(ip addr, netstat,traceroute,etc), emptying unwanted data to free up space like logs deletion.
-vi and nano editors
-Creating partitions and mounting them filesystem concepts and commands
+* df -hT
+* du -sh
+* top
+* ps
+* lsblk
+* ssh, and scp
+* And regarding storage disk management, networking related(ip addr, netstat,traceroute,etc), emptying unwanted data to free up space like logs deletion.
+* vi and nano editors
+* Creating partitions and mounting them filesystem concepts and commands
 CPU and Memory utilization statistics commands and commands to optimize them, ,
-File searching commands, find , grep,sed,awk,regex
+* File searching commands, find , grep,sed,awk,regex
 
-Security related commands in linux
+* Security related commands in linux
+
+  
 ## Process
 To list all processes 
 ```Linux
