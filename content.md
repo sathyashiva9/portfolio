@@ -11,8 +11,8 @@ diskspace cleanup
 logs unnecessary cleanup
 
 ## Commands
-nslookup
-tmux
+* nslookup
+* tmux
 df -hT
 du -sh
 top
