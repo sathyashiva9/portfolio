@@ -29,8 +29,24 @@ To kill a process using PID
 ```Linux
 kill -9 <PID>
 ```
+## Command Aliases
+To create a persistent environment variable
+```Linux
+vi .bashrc
+```
+This is example for ls command 
+```Linux
+alias alias_ls='ls -l'
+```
+And then in the terminal
+```Linux
+source .bashrc
+```
+Or can use .bash_aliases file.
 
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
+
+
 ## File Handling
 [https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux](https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux)
