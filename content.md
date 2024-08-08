@@ -10,6 +10,22 @@ Permissions and users
 diskspace cleanup
 logs unnecessary cleanup
 
+## Commands
+nslookup
+tmux
+df -hT
+du -sh
+top
+ps
+lsblk
+ssh, and scp
+And regarding storage disk management, networking related(ip addr, netstat,traceroute,etc), emptying unwanted data to free up space like logs deletion.
+vi and nano editors
+Creating partitions and mounting them filesystem concepts and commands
+CPU and Memory utilization statistics commands and commands to optimize them, ,
+File searching commands, find , grep,sed,awk,regex
+
+Security related commands in linux
 ## Process
 To list all processes 
 ```Linux
@@ -62,9 +78,15 @@ To check the disk space usage
 df -hT
 ```
 
-To check the space usage of each file
+To check the disk space used by files and directories
 ```Linux
 du -sh <path-to-directory>
+```
+s option is used to add the storage used by all the files. If you remove it then it provides space used by files individually.
+
+The lsblk command displays information about all available or specified block devices
+```Linux
+lsblk -f
 ```
 
 ## References
