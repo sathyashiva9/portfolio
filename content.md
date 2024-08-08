@@ -96,6 +96,46 @@ The lsblk command displays information about all available or specified block de
 lsblk -f
 ```
 
+### Logs
+The main logrotate.conf file is the global configuration file for logrotate. It sets default behaviors that apply to all log files unless overridden by service-specific configuration files.
+To view it
+```Linux
+cat /etc/logrotate.conf
+```
+
+The files in the /etc/logrotate.d/ directory contain log rotation configurations for specific services or applications. Each file typically corresponds to a particular service, like apache2, nginx, syslog, etc.
+```Linux
+ls /etc/logrotate.d
+```
+```Linux
+$ cat /etc/logrotate.d/rsyslog
+/var/log/syslog
+/var/log/mail.info
+/var/log/mail.warn
+/var/log/mail.err
+/var/log/mail.log
+/var/log/daemon.log
+/var/log/kern.log
+/var/log/auth.log
+/var/log/user.log
+/var/log/lpr.log
+/var/log/cron.log
+/var/log/debug
+/var/log/messages
+{
+	rotate 4
+	weekly
+	missingok
+	notifempty
+	compress
+	delaycompress
+	sharedscripts
+	postrotate
+		/usr/lib/rsyslog/rsyslog-rotate
+	endscript
+}
+```
+
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 [https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/](https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/)
