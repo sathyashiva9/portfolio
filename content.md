@@ -52,6 +52,21 @@ source .bashrc
 ```
 Or can use .bash_aliases file.
 
+## systemd services
+
+## Network
+
+## storage
+To check the disk space usage
+```Linux
+df -hT
+```
+
+To check the space usage of each file
+```Linux
+du -sh <path-to-directory>
+```
+
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 [https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/](https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/)
