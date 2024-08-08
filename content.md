@@ -97,7 +97,7 @@ lsblk -f
 ```
 
 ### Logs
-The main logrotate.conf file is the global configuration file for logrotate. It sets default behaviors that apply to all log files unless overridden by service-specific configuration files.
+Logs are managed using logrotate so that they do not consume more space. The main logrotate.conf file is the global configuration file for logrotate. It sets default behaviors that apply to all log files unless overridden by service-specific configuration files.
 To view it
 ```Linux
 cat /etc/logrotate.conf
@@ -135,6 +135,17 @@ $ cat /etc/logrotate.d/rsyslog
 	endscript
 }
 ```
+
+THe var/log directory is the standard for storing log files on almost all Linux distributions. To view the size occupied by all the logs
+```Linux
+sudo du -ch /var/log
+```
+
+To find logs older than 7 days(here 7 is the no. of days).
+```Linux
+sudo find /var/log -type f -mtime +7
+```
+
 
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
