@@ -20,7 +20,7 @@ This will sort the processes by their CPU usage, showing the most CPU-intensive 
 
 Press M (uppercase) while top is running.
 This will sort the processes by their memory usage, displaying the processes using the most memory at the top.
-k, which prompts a process ID (PID) to kill (terminate)
+Press k, which prompts a process ID (PID) to kill (terminate)
 
 To identify pid of a process using port number
 ```Linux
@@ -30,6 +30,13 @@ To kill a process using PID
 ```Linux
 kill -9 <PID>
 ```
+To check how the start time and how long a process is running
+```Linux
+ps -p <PID> -o start,etime
+ps -p <PID> -o etime
+```
+
+
 ## Command Aliases
 To create a alias for a command
 ```Linux
@@ -47,6 +54,7 @@ Or can use .bash_aliases file.
 
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
+[https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/](https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/)
 
 
 ## File Handling
