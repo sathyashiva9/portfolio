@@ -31,7 +31,7 @@ To kill a process using PID
 kill -9 <PID>
 ```
 ## Command Aliases
-To create a persistent environment variable
+To create a alias for a command
 ```Linux
 vi .bashrc
 ```
