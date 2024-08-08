@@ -84,6 +84,11 @@ To check the disk space used by files and directories
 ```Linux
 du -sh <path-to-directory>
 ```
+Sorting in decreasing order the disk usage by all the files and directories in the current directory. If required in asceding then remove the r flag.
+```Linux
+du -sh * | sort -nr
+```
+
 s option is used to add the storage used by all the files. If you remove it then it provides space used by files individually.
 
 The lsblk command displays information about all available or specified block devices
