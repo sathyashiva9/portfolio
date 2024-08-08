@@ -20,6 +20,7 @@ This will sort the processes by their CPU usage, showing the most CPU-intensive 
 
 Press M (uppercase) while top is running.
 This will sort the processes by their memory usage, displaying the processes using the most memory at the top.
+k, which prompts a process ID (PID) to kill (terminate)
 
 To identify pid of a process using port number
 ```Linux
