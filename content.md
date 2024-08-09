@@ -164,17 +164,26 @@ The /etc/systemd/journald.conf config file is used to determine how systemd logs
 
 ## Security
 SSH
-
-To do port forwarding
+To connect to your EC2 instance
+```
+ssh -i /path/to/your-key.pem ec2-user@your-ec2-public-ip
+```
+port forwarding
+If we access the local port 3000, we actually make a request to port 80 of remote-server.com
 ```
 ssh -i Downloads/new_one.pem -L 3000:localhost:80 ec2-user@13.233.113.34
 ```
 
+TO copy files from local to remote server
+```
+scp -i /path/to/your/private-key.pem /path/to/local/file username@ec2-instance-public-ip:/path/to/remote/directory
+```
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 [https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/](https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/)
 [https://www.baeldung.com/linux/clean-up-linux-system](https://www.baeldung.com/linux/clean-up-linux-system)
 [https://www.baeldung.com/linux/systemd-journal-logs-clear](https://www.baeldung.com/linux/systemd-journal-logs-clear)
+[https://www.baeldung.com/linux/secure-shell-ssh](https://www.baeldung.com/linux/secure-shell-ssh)
 
 ## File Handling
 [https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux](https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux)
