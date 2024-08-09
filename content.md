@@ -104,6 +104,8 @@ systemctl edit project-mercury.service --full
 ```
 If we use full option then during next start of this service it automatically gets updated. Or else we need to use 
 `systemctl daemon-reload` command to update the service.
+
+
 ## Network
 `nslookup` is a command to query the DNS 
 ```
@@ -114,6 +116,13 @@ To use a specific DNS server
 ```
 nslookup domainname.tld dns.server.ip.address
 ```
+
+To check whether a server is reachable
+```
+ping <domain-name-or-address>
+```
+
+TO
 
 
 ## storage
