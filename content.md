@@ -16,11 +16,11 @@ logs unnecessary cleanup
 * df -hT
 * du -sh
 * top
-* ps
+* ps 
 * lsblk
 * ssh, and scp
 * And regarding storage disk management, networking related(ip addr, netstat,traceroute,etc), emptying unwanted data to free up space like logs deletion(Also look at compressed logs).
-* vi and nano editors
+* vi and nano editors 
 * Creating partitions and mounting them filesystem concepts and commands
 CPU and Memory utilization statistics commands and commands to optimize them, ,
 * File searching commands, find , grep,sed,awk,regex
