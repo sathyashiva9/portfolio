@@ -72,6 +72,16 @@ Or can use .bash_aliases file.
 
 ## systemd services
 
+Start a unit immediately
+```
+systemctl start unit
+```
+
+Stop a unit immediately
+```
+systemctl stop unit
+```
+
 Our service unit files will be located at /etc/systemd/system/
 
 we can state that our unit should be started after the units we provide in the form of a space-separated list.
