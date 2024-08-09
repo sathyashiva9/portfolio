@@ -179,6 +179,7 @@ sudo find /var/log -type f -mtime +7
 ```
 
 **journalctl**
+
 Using `journalctl -u docker.service` command print all the logs specific to the unit specified, for example docker in this case.
 Using `journalctl -u docker.service --since` command print all the logs specific to the unit specified since the given time
 ```
