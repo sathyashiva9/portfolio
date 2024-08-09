@@ -141,16 +141,32 @@ THe var/log directory is the standard for storing log files on almost all Linux 
 sudo du -ch /var/log
 ```
 
-To find logs older than 7 days(here 7 is the no. of days).
+To find logs that were last modified more than 7 daysago (here 7 is the no. of days and filters the results to include only files that were last modified more than 7 days ago. If you want less than 7 then -7 and 7 for exactly 7. mtim refers to modified-time).
 ```Linux
 sudo find /var/log -type f -mtime +7
 ```
+TO see the disk usage of systemd service logs
+```Linux
+journalctl --disk-usage 
+```
+Can see them under /var/log/journal
 
+TO delete journal logs older than specific days
+```
+sudo journalctl --vacuum-time=7d
+```
+
+Also we can clear logs until we reduce the total size to 1GB
+```
+journalctl --vacuum-size=1G 
+```
+The /etc/systemd/journald.conf config file is used to determine how systemd logs are deleted.
 
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 [https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/](https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/)
-
+[https://www.baeldung.com/linux/clean-up-linux-system](https://www.baeldung.com/linux/clean-up-linux-system)
+[https://www.baeldung.com/linux/systemd-journal-logs-clear](https://www.baeldung.com/linux/systemd-journal-logs-clear)
 
 ## File Handling
 [https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux](https://www.digitalocean.com/community/tutorials/linux-commands#the-ln-command-in-linux)
