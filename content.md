@@ -1,9 +1,9 @@
 # Linux Commands
 ### Linux administration
-Processes, Environment Variables, Aliases Setting
+Processes(f), Environment Variables, Aliases Setting(f)
 Network related and DNS  and related
 ### Security
-SSH and related 
+SSH and related (f)
 Permissions and users
 
 ### Cleanup linux system
@@ -13,14 +13,14 @@ logs unnecessary cleanup
 ## Commands
 * nslookup
 * tmux
-* df -hT
-* du -sh
-* top
-* ps 
-* lsblk
-* ssh, and scp
+* df -hT9(f)
+* du -sh(f)
+* top(f)
+* ps (f)
+* lsblk(f)
+* ssh, and scp(f)
 * And regarding storage disk management, networking related(ip addr, netstat,traceroute,etc), emptying unwanted data to free up space like logs deletion(Also look at compressed logs).
-* vi and nano editors 
+* vi and nano editors (f)
 * Creating partitions and mounting them filesystem concepts and commands
 CPU and Memory utilization statistics commands and commands to optimize them, ,
 * File searching commands, find , grep,sed,awk,regex
@@ -105,6 +105,16 @@ systemctl edit project-mercury.service --full
 If we use full option then during next start of this service it automatically gets updated. Or else we need to use 
 `systemctl daemon-reload` command to update the service.
 ## Network
+`nslookup` is a command to query the DNS 
+```
+nslookup <domain-name>
+```
+
+To use a specific DNS server
+```
+nslookup domainname.tld dns.server.ip.address
+```
+
 
 ## storage
 To check the disk space usage
