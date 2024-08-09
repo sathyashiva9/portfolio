@@ -72,6 +72,20 @@ Or can use .bash_aliases file.
 
 ## systemd services
 
+
+we can state that our unit should be started after the units we provide in the form of a space-separated list.
+```
+[~]$ cat /etc/systemd/system/project-mercury.service
+[Unit]
+Description=Python Django for Project Mercury
+Documentation=http://wiki.caleston-dev.ca/mercury
+After=postgresql.service
+```
+If we make any changes to these service files we need
+```
+[~]$ systemctl daemon-reload
+[~]$ systemctl start project-mercury.service
+```
 ## Network
 
 ## storage
