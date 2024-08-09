@@ -177,6 +177,14 @@ To find logs that were last modified more than 7 daysago (here 7 is the no. of d
 ```Linux
 sudo find /var/log -type f -mtime +7
 ```
+
+
+Using `journalctl -u docker.service` command print all the logs specific to the unit specified, for example docker in this case.
+Using `journalctl -u docker.service --since` command print all the logs specific to the unit specified since the given time
+```
+journalctl -u docker.service --since "2022-01-01 13:45:00"
+```
+
 TO see the disk usage of systemd service logs
 ```Linux
 journalctl --disk-usage 
