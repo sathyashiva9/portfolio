@@ -165,6 +165,10 @@ The /etc/systemd/journald.conf config file is used to determine how systemd logs
 ## Security
 SSH
 To connect to your EC2 instance
+chane permissions of the key-pair used to connect to your instance
+```
+chmod 400 /path/to/your-key.pem
+```
 ```
 ssh -i /path/to/your-key.pem ec2-user@your-ec2-public-ip
 ```
