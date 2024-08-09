@@ -162,6 +162,14 @@ journalctl --vacuum-size=1G
 ```
 The /etc/systemd/journald.conf config file is used to determine how systemd logs are deleted.
 
+## Security
+SSH
+
+To do port forwarding
+```
+ssh -i Downloads/new_one.pem -L 3000:localhost:80 ec2-user@13.233.113.34
+```
+
 ## References
 [https://www.digitalocean.com/community/tutorials/process-management-in-linux](https://www.digitalocean.com/community/tutorials/process-management-in-linux)
 [https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/](https://www.cyberciti.biz/faq/how-to-check-how-long-a-process-has-been-running/)
