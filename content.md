@@ -81,7 +81,7 @@ Description=Python Django for Project Mercury
 Documentation=http://wiki.caleston-dev.ca/mercury
 After=postgresql.service
 ```
-If we make any changes to these service files we need
+If we make any changes to these service files we need to reload the daemon and start the service.
 ```
 [~]$ systemctl daemon-reload
 [~]$ systemctl start project-mercury.service
