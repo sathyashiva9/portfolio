@@ -87,6 +87,13 @@ If we make any changes to these service files we need to reload the daemon and s
 [~]$ systemctl daemon-reload
 [~]$ systemctl start project-mercury.service
 ```
+
+We can edit the service unit files using
+```
+systemctl edit project-mercury.service --full
+```
+If we use full option then during next start of this service it automatically gets updated. Or else we need to use 
+`systemctl daemon-reload` command to update the service.
 ## Network
 
 ## storage
