@@ -122,7 +122,7 @@ To check whether a server is reachable
 ping <domain-name-or-address>
 ```
 
-TO
+
 
 
 ## storage
