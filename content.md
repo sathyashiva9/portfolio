@@ -1,31 +1,4 @@
 # Linux Commands
-### Linux administration
-Processes(f), Environment Variables, Aliases Setting(f)
-Network related and DNS  and related
-### Security
-SSH and related (f)
-Permissions and users
-
-### Cleanup linux system
-diskspace cleanup
-logs unnecessary cleanup
-
-## Commands
-* nslookup
-* tmux
-* df -hT9(f)
-* du -sh(f)
-* top(f)
-* ps (f)
-* lsblk(f)
-* ssh, and scp(f)
-* And regarding storage disk management, networking related(ip addr, netstat,traceroute,etc), emptying unwanted data to free up space like logs deletion(Also look at compressed logs).
-* vi and nano editors (f)
-* Creating partitions and mounting them filesystem concepts and commands
-CPU and Memory utilization statistics commands and commands to optimize them, ,
-* File searching commands, find , grep,sed,awk,regex
-
-* Security related commands in linux
 
   
 ## Process
