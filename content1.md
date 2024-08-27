@@ -1,4 +1,4 @@
-#Creating Dashboard in kibana
+# Creating Dashboard in kibana
 
 
 Index pattern application* has ResponseTimeInMs field as text type. But we need to convert it into the number type field.
