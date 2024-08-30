@@ -39,6 +39,7 @@ Use runtime fields to convert ResponseTimeInMs field to number type.
 
 Runtime field is created successfully. Now response_time_in_ms is an number type(Long) to use.
 
+
 ## Creating Visualizations
 ### Table creation
 1. Go to visualize library from the menu
@@ -51,7 +52,7 @@ Runtime field is created successfully. Now response_time_in_ms is an number type
   Aggregation=Terms
   Field=url.keyword
   Order by=Custom metric, Aggregation=Max, Field=response_time_in_ms
-  Order=Descending and size=100
+  Order=Descending and size=2147483647
   Custom label=Api
   ```
 7. Now Add Sub-bucket and click on Split rows
@@ -60,39 +61,66 @@ Runtime field is created successfully. Now response_time_in_ms is an number type
   Sub-aggregation=Terms
   Field=response_time_in_ms
   Order by=Custom metric, Aggregation=Max, Field=response_time_in_ms
-  Order=Descendig, size=1
+  Order=Descending, size=1
   Custom_label=Max_Response_Time_In_Ms
   ```
-9. Click on save, give a ```title=Table_Of_Api_Response_Times_In_Ms``` and add it to the visualize library.
+9. Now Add another Sub-bucket and click on Split rows(This sub-bucket is for timestamp)
+10. Configure Sub-bucket
+```
+Sub aggregation=Terms
+Field=@timestamp
+Order by=Custom metric,Aggregation=Max,Field=response_time_in_ms
+Order=Descending,Size=1
+Custom label=@timestamp
+```
+11. Now Add another Sub-bucket and click on Split rows(This sub-bucket is for instance name)
+12. Configure it
+```
+Sub aggregation=Terms
+Field=instance.keyword
+Order by=Custom metric,Aggregation=Max,Field=response_time_in_ms
+Order=Descending,Size=1
+Custom label=Service name
+```
+13. Click on save, give a ```title=Table_Of_Api_Response_Times_In_Ms``` and add it to the visualize library.
 
 Table is created successfully
 
 ### Graph creation
 1. Go to visualize library from the menu
 2. Click on Create visualization and select Aggregation based
-3. Select Data table as visualization type
+3. Select line graph as visualization type
 4. Select application* index pattern
 5. On the right-hand side, you can see the Data tab. Under it in the Metrics Y-axis is present. Configure it
   ```
-  Aggregation=Max
+  Aggregation=Top Hit
   Field=response_time_in_ms
-  Custom label=Max_Response_Time_In_Ms
+  Aggregate with=Concatenate, Size=1
+  Sort on=@timestamp, Order=Descending
+  Custom label=response_time_in_ms
   ```
 6. Click on Add bucket and click on X-axis, configure it
   ```
-  Aggregation=Terms
-  Field=url.keyword
-  Order by=Metric:Max_Reponse_time_In_Ms
-  Order=Descending, size=100
-  Custom label=Api
+  Aggregation=Date Histogram
+  Field=@timestamp
+  Min Interval=1ms(we can change it to seconds or minutes, eventhough we selected the 1ms it get auto-scaled if no. of buckets in thaat time increases)
   ```
-7.  On the right-hand side, Beside Data tab there is another tab called Metrics and axes. Select it and configure as:
+7. Click on Add bucket and click on Split series, configure it
 ```
-X-axis position=Left
-Under labels disable the Show labels button. 
+Sub aggregation=Terms
+Field=url.keyword
+Order by=Custom metric,Aggregation=Max,Field=@timestamp
+Order=Descending, Size=2147483647
+Custom label=Api
+```
+8.  On the right-hand side, Beside Data tab there is another tab called Panel Settings. Select it and configure as:
+```
+Legend Position=Right
+On the visualization, on the bottom Right corner, there is menu type icon. It is used to toggle the appearance of the url details on right of the visualization.
 ```
 8.  Click on Update button below.
-9.  Click on Save, give it ```title=Graph_Of_Api_Max_Response_Time_In_Ms```. Add it to the visualize library.
+9. Now the line graph visualization is being created. But to change the type of the chart, go to Metrics and axes tab. Under Metrics section, in the Chart type change the value to Bar. Click on Update. Now the visualization is changed to the bar graph stacked structure. 
+10.  Click on Save, give it ```title=Graph_Of_Api_Response_Times_Over_Time```. Add it to the visualize library.
 
 Graph is created successfully
 
@@ -101,7 +129,7 @@ Graph is created successfully
 2. Click on Create dashboard
 3. Click on Add visualization
 4. Select the created table view and graph view from the visualize library
-5. And Click on save ```title=Api_Max_Response_Time_Dashboard```
+5. And Click on save ```title=Api_Response_Time_Dashboard```
 Dashboard is created successfully
 
 Time range can be set in the dashboard itself
