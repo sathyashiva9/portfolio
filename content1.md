@@ -116,7 +116,7 @@ Custom label=Api
 8.  On the right-hand side, Beside Data tab there is another tab called Panel Settings. Select it and configure as:
 ```
 Legend Position=Right
-On the visualization, on the bottom Right corner, there is menu type icon. It is used to toggle the appearance of the url details on right of the visualization.
+On the visualization, on the bottom Right corner, there is menu type icon. It is used to toggle the appearance of the api details on right of the visualization.
 ```
 8.  Click on Update button below.
 9. Now the line graph visualization is being created. But to change the type of the chart, go to Metrics and axes tab. Under Metrics section, in the Chart type change the value to Bar. Click on Update. Now the visualization is changed to the bar graph stacked structure. 
