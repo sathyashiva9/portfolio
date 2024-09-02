@@ -3,7 +3,7 @@
 ## Extracting ns,command, durationMillis from the message field
 The message field in the log contains the attr object. And this attr object contains ns, command, durationMillis. To retrieve them use the json processor in filebeat.
 
-Configuring the filebeat service so that we get the ns, command, durationMillis fields in kibana. Add this code at the end in the ```/etc/filebeat/filebeat.yml``` file.
+Configuring the filebeat service to get ns, command, durationMillis fields in kibana. Add this code at the end in the ```/etc/filebeat/filebeat.yml``` file.
 ```
 processors:
 #  - add_host_metadata: ~
