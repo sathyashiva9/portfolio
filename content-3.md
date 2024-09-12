@@ -1,6 +1,32 @@
-# Scale from and to 0
+# Scale from and to 0 nodes using the Cluster autoscaler
 
-Go to the ASG of the Nodegroup and add the following tags:
+1. Go to the ASG of the Nodegroup and add the following tags:
+```
+key=k8s.io/cluster-autoscaler/node-template/label/ng 
+value=Ecg-Analysis
+
+key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/ignoredaemonsetsutilization
+value=true
+
+key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/scaledownunneededtime
+value=10m0s
+```
+
+
+2. Go to the launch template of the Nodegroup and add the tags.
+```
+key=k8s.io/cluster-autoscaler/node-template/label/ng 
+value=Ecg-Analysis
+
+key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/ignoredaemonsetsutilization
+value=true
+
+key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/scaledownunneededtime
+value=10m0s
+```
+
+## About the tags:
+
 ```
 key=k8s.io/cluster-autoscaler/node-template/label/ng 
 value=Ecg-Analysis
@@ -20,15 +46,5 @@ value=10m0s
 Add the above tag to change the default termination time which is 10m.
 
 
-Go to the launch template of the Nodegroup and add the tags.
-```
-key=k8s.io/cluster-autoscaler/node-template/label/ng 
-value=Ecg-Analysis
 
-key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/ignoredaemonsetsutilization
-value=true
-
-key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/scaledownunneededtime
-value=10m0s
-```
 
