@@ -46,3 +46,8 @@ Add the above tag to change the default termination time which is 10m.
 [Link here](https://docs.google.com/document/d/1Pj9CqVFExueQHvNu2WUQd4L3zOap32f_-NYpgd2Eb_M/edit?addon_store)
 
 
+
+## Resources
+
+[1 Resource](https://github.com/kubernetes/autoscaler/blob/master/cluster-autoscaler/cloudprovider/aws/README.md)
+[2 Resource](https://aws.github.io/aws-eks-best-practices/cluster-autoscaling/)
