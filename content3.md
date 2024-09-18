@@ -20,17 +20,7 @@ value=10m0s
 ```
 
 
-1. 
-```
-key=k8s.io/cluster-autoscaler/node-template/label/ng 
-value=Ecg-Analysis
 
-key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/ignoredaemonsetsutilization
-value=true
-
-key=k8s.io/cluster-autoscaler/node-template/autoscaling-options/scaledownunneededtime
-value=10m0s
-```
 
 
 ## About the tags:
